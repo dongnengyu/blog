@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="泛型 #码农 Java泛型基础  泛型类型在逻辑上看以看成是多个不同的类型，实际上都是相同的基本类型。 泛型有三种使用方式，分别为：泛型类、泛型接口、泛型方法 &amp;lt;? extends T&amp;gt;和&amp;lt;? super T&amp;gt;的区别&amp;lt;? extends T&amp;gt;表示该通配符所代表的类型是T类型的子类。&amp;lt;? super T&amp;gt;表示该通配符所代表的类型是T类型的父类。 jav">
+<meta name="description" content="#面试题  String和StringBuffer的区别 gc的概念，如果A和B对象循环引用，是否可以被GC？ Java中的内存溢出是如何造成的 String s = “123”;这个语句有几个对象产生 Error、Exception和RuntimeException的区别，作用又是什么？ 列举3个以上的RuntimeException reader和inputstream区别 hashCode的">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java泛型基础--源代码与编译代码对比">
-<meta property="og:url" content="http://yoursite.com/blog/2018/03/23/泛型/index.html">
+<meta property="og:title" content="阿里java面试题">
+<meta property="og:url" content="http://yoursite.com/blog/2018/05/17/java/阿里java面试题总结/index.html">
 <meta property="og:site_name" content="做只猫">
-<meta property="og:description" content="泛型 #码农 Java泛型基础  泛型类型在逻辑上看以看成是多个不同的类型，实际上都是相同的基本类型。 泛型有三种使用方式，分别为：泛型类、泛型接口、泛型方法 &amp;lt;? extends T&amp;gt;和&amp;lt;? super T&amp;gt;的区别&amp;lt;? extends T&amp;gt;表示该通配符所代表的类型是T类型的子类。&amp;lt;? super T&amp;gt;表示该通配符所代表的类型是T类型的父类。 jav">
+<meta property="og:description" content="#面试题  String和StringBuffer的区别 gc的概念，如果A和B对象循环引用，是否可以被GC？ Java中的内存溢出是如何造成的 String s = “123”;这个语句有几个对象产生 Error、Exception和RuntimeException的区别，作用又是什么？ 列举3个以上的RuntimeException reader和inputstream区别 hashCode的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-23T08:48:53.000Z">
+<meta property="og:updated_time" content="2018-05-17T03:12:56.642Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java泛型基础--源代码与编译代码对比">
-<meta name="twitter:description" content="泛型 #码农 Java泛型基础  泛型类型在逻辑上看以看成是多个不同的类型，实际上都是相同的基本类型。 泛型有三种使用方式，分别为：泛型类、泛型接口、泛型方法 &amp;lt;? extends T&amp;gt;和&amp;lt;? super T&amp;gt;的区别&amp;lt;? extends T&amp;gt;表示该通配符所代表的类型是T类型的子类。&amp;lt;? super T&amp;gt;表示该通配符所代表的类型是T类型的父类。 jav">
+<meta name="twitter:title" content="阿里java面试题">
+<meta name="twitter:description" content="#面试题  String和StringBuffer的区别 gc的概念，如果A和B对象循环引用，是否可以被GC？ Java中的内存溢出是如何造成的 String s = “123”;这个语句有几个对象产生 Error、Exception和RuntimeException的区别，作用又是什么？ 列举3个以上的RuntimeException reader和inputstream区别 hashCode的">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/blog/2018/03/23/泛型/"/>
+  <link rel="canonical" href="http://yoursite.com/blog/2018/05/17/java/阿里java面试题总结/"/>
 
 
 
 
 
-  <title>java泛型基础--源代码与编译代码对比 | 做只猫</title>
+  <title>阿里java面试题 | 做只猫</title>
   
 
 
@@ -272,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2018/03/23/泛型/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/blog/2018/05/17/java/阿里java面试题总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="董能宇">
@@ -289,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java泛型基础--源代码与编译代码对比</h1>
+          <h1 class="post-title" itemprop="name headline">阿里java面试题</h1>
         
 
         <div class="post-meta">
@@ -301,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-23T15:51:50+08:00">
-                2018-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T00:00:00+08:00">
+                2018-05-17
               </time>
             
 
@@ -317,8 +318,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-23T16:48:53+08:00">
-                2018-03-23
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-17T11:12:56+08:00">
+                2018-05-17
               </time>
             
           </span>
@@ -332,8 +333,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog/2018/03/23/泛型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/blog/2018/03/23/泛型/" itemprop="commentsCount"></span>
+                <a href="/blog/2018/05/17/java/阿里java面试题总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/blog/2018/05/17/java/阿里java面试题总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -392,17 +393,70 @@
       
 
       
-        <p>泛型</p>
-<p>#码农</p>
-<p>Java泛型基础</p>
+        <p>#面试题</p>
 <ol>
-<li>泛型类型在逻辑上看以看成是多个不同的类型，实际上都是相同的基本类型。</li>
-<li>泛型有三种使用方式，分别为：泛型类、泛型接口、泛型方法</li>
-<li>&lt;? extends T&gt;和&lt;? super T&gt;的区别<br>&lt;? extends T&gt;表示该通配符所代表的类型是T类型的子类。<br>&lt;? super T&gt;表示该通配符所代表的类型是T类型的父类。</li>
-<li>java不可能实现真正的泛型</li>
+<li>String和StringBuffer的区别</li>
+<li>gc的概念，如果A和B对象循环引用，是否可以被GC？</li>
+<li>Java中的内存溢出是如何造成的</li>
+<li>String s = “123”;这个语句有几个对象产生</li>
+<li>Error、Exception和RuntimeException的区别，作用又是什么？</li>
+<li>列举3个以上的RuntimeException</li>
+<li>reader和inputstream区别</li>
+<li>hashCode的作用</li>
+<li>Object类中有哪些方法，列举3个以上（可以引导）</li>
+<li>char型变量中能不能存贮一个中文汉字?为什么?</li>
+<li>列举几个Java Collection类库中的常用类</li>
+<li>List、Set、Map是否都继承自Collection接口？</li>
+<li>HashMap和Hashtable的区别</li>
+<li>HashMap中是否任何对象都可以做为key,用户自定义对象做为key有没有什么要求？</li>
+<li>interface 和 abstrat class的区别 是否可以继承多个接口，是否可以继承多个抽象类</li>
+<li>启动一个线程是用run()还是start()? 多线程有几种实现 同步和并发是如何解决的 什么叫守护线程，用什么方法实现守护线程（Thread.setDeamon()的含义） 如何停止一个线程？ 解释是一下什么是线程安全？举例说明一个线程不安全的例子。解释Synchronized关键字的作用。 当一个线程进入一个对象的一个synchronized方法后，其它线程是否可进入此对象的其它方法?</li>
+<li>了解过哪些JDK8的新特性，举例描述下相应的特性？</li>
+<li>对sql进行优化的原则有哪些？</li>
+<li>servlet生命周期是生命与cgi的区别？</li>
+<li>StringBuffer有什么优势？为什么快？</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//源代码</span></span><br><span class="line"><span class="keyword">import</span> com.oracle.tools.packager.Log;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 泛型方法 printArray</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt; E &gt; <span class="function"><span class="keyword">void</span> <span class="title">printArray</span><span class="params">( E[] inputArray )</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// 输出数组元素</span></span><br><span class="line">        <span class="keyword">for</span> ( E element : inputArray )&#123;</span><br><span class="line">            System.out.printf( <span class="string">"%s "</span>, element );</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String args[] )</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// 创建不同类型数组： Integer, Double 和 Character</span></span><br><span class="line">        Integer[] intArray = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line">        Double[] doubleArray = &#123; <span class="number">1.1</span>, <span class="number">2.2</span>, <span class="number">3.3</span>, <span class="number">4.4</span> &#125;;</span><br><span class="line">        Character[] charArray = &#123; <span class="string">'H'</span>, <span class="string">'E'</span>, <span class="string">'L'</span>, <span class="string">'L'</span>, <span class="string">'O'</span> &#125;;</span><br><span class="line"></span><br><span class="line">        System.out.println( <span class="string">"整型数组元素为:"</span> );</span><br><span class="line">        printArray( intArray  ); <span class="comment">// 传递一个整型数组</span></span><br><span class="line"></span><br><span class="line">        System.out.println( <span class="string">"\n双精度型数组元素为:"</span> );</span><br><span class="line">        printArray( doubleArray ); <span class="comment">// 传递一个双精度型数组</span></span><br><span class="line"></span><br><span class="line">        System.out.println( <span class="string">"\n字符型数组元素为:"</span> );</span><br><span class="line">        printArray( charArray ); <span class="comment">// 传递一个字符型数组</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//编译代码</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArray</span><span class="params">(Object[] inputArray)</span> </span>&#123;</span><br><span class="line">      Object[] var1 = inputArray;</span><br><span class="line">      <span class="keyword">int</span> var2 = inputArray.length;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> var3 = <span class="number">0</span>; var3 &lt; var2; ++var3) &#123;</span><br><span class="line">         Object element = var1[var3];</span><br><span class="line">         System.out.printf(<span class="string">"%s "</span>, <span class="keyword">new</span> Object[]&#123;element&#125;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      System.out.println();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      Integer[] intArray = <span class="keyword">new</span> Integer[]&#123;Integer.valueOf(<span class="number">1</span>), Integer.valueOf(<span class="number">2</span>), Integer.valueOf(<span class="number">3</span>), Integer.valueOf(<span class="number">4</span>), Integer.valueOf(<span class="number">5</span>)&#125;;</span><br><span class="line">      Double[] doubleArray = <span class="keyword">new</span> Double[]&#123;Double.valueOf(<span class="number">1.1</span>D), Double.valueOf(<span class="number">2.2</span>D), Double.valueOf(<span class="number">3.3</span>D), Double.valueOf(<span class="number">4.4</span>D)&#125;;</span><br><span class="line">      Character[] charArray = <span class="keyword">new</span> Character[]&#123;Character.valueOf(<span class="string">'H'</span>), Character.valueOf(<span class="string">'E'</span>), Character.valueOf(<span class="string">'L'</span>), Character.valueOf(<span class="string">'L'</span>), Character.valueOf(<span class="string">'O'</span>)&#125;;</span><br><span class="line">      System.out.println(<span class="string">"鏁村瀷鏁扮粍鍏冪礌涓�:"</span>);</span><br><span class="line">      printArray(intArray);</span><br><span class="line">      System.out.println(<span class="string">"\n鍙岀簿搴﹀瀷鏁扮粍鍏冪礌涓�:"</span>);</span><br><span class="line">      printArray(doubleArray);</span><br><span class="line">      System.out.println(<span class="string">"\n瀛楃鍨嬫暟缁勫厓绱犱负:"</span>);</span><br><span class="line">      printArray(charArray);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>other</p>
+<ul>
+<li>谈谈你对HashMap的理解，底层原理的基本实现，HashMap怎么解决碰撞问题的？</li>
+<li>开发中用了那些数据库？回答mysql，储存引擎有哪些？然后问了我悲观锁和乐观锁问题使用场景、分布式集群实现的原理。</li>
+<li>springmvc和mybatis的工作原理，有没有看过底层源码？</li>
+<li>熟悉IO么？与NIO的区别，阻塞与非阻塞的区别微信红包怎么实现。</li>
+<li>海量数据分析。</li>
+<li>线程安全和非线程安全。</li>
+<li>HTTP2.0、thrift。</li>
+<li>java反射应用分布式事务一致性。</li>
+<li>nio的底层实现。</li>
+<li>jvm基础是必问的，jvm GC原理，JVM怎么回收内存。</li>
+<li>API接口与SDI接口的区别dubbo如何一条链接并发多个调用。</li>
+<li>Dubbo的原理，序列化相关问题。</li>
+<li>用过哪些中间件。</li>
+<li>做过工作流引擎没有。</li>
+<li>以前的工作经历，自己觉得出彩的地方</li>
+<li>线程池的一些原理，锁的机制升降级</li>
+<li>从系统层面考虑，分布式从哪些纬度考虑</li>
+<li>Hadoop底层怎么实现</li>
+<li>threadLocal，线程池，hashMap/hashTable/coccurentHashMap等</li>
+<li>秒杀系统的设计</li>
+<li>虚拟机，IO相关知识点</li>
+<li>Linux的命令</li>
+<li>一个整形数组，给定一个数，在数组中找出两个数的和等于这个数，并打印出来，我写的时间复杂度高，要求O(n)。</li>
+<li>n个整数，找出连续的m个数加和是最大。</li>
+<li>更重视开源技术</li>
+<li>数据库锁隐原理</li>
+<li>1000个线程同时运行，怎么防止不卡</li>
+<li>并列的并发消费问题）</li>
+<li>高并发量大的话怎么处理热点，数据等</li>
+<li>如何获取一个本地服务器上可用的端口</li>
+<li>流量控制相关问题</li>
+<li>数据库TPS是多少，是否进行测试过</li>
+<li>缓存击穿有哪些方案解决</li>
+<li>Java怎么挖取回收器相关原理</li>
+<li>Java的集合都有哪些，都有什么特点</li>
+<li>分布式锁，redis缓存，spring aop，系统架构图，MySQL的特性</li>
+<li>场景，同时给10万个人发工资，怎么样设计并发方案，能确保在1分钟内全部发完 打个比方会提出类似的场景</li>
+</ul>
+
       
     </div>
     
@@ -417,6 +471,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/blog/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
 
       
       
@@ -426,8 +486,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/03/20/5个经典的同步问题/" rel="next" title="5个经典多线程问题">
-                <i class="fa fa-chevron-left"></i> 5个经典多线程问题
+              <a href="/blog/2018/05/11/java/序列化和持久化的区别与联系/" rel="next" title="序列化和持久化的区别与联系">
+                <i class="fa fa-chevron-left"></i> 序列化和持久化的区别与联系
               </a>
             
           </div>
@@ -435,10 +495,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2018/03/25/将javaBean对象转化成Map/" rel="prev" title="将javaBean对象转化成Map">
-                将javaBean对象转化成Map <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -756,7 +812,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1521791510000', 
+            id: '1526486400000', 
             owner: 'dongnengyu',
             repo: 'blog',
             
